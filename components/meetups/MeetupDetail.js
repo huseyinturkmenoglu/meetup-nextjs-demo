@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 const MeetupDetail = () => {
   const {query} = useRouter()
 
-  console.dir({query});
   return (
     <>
       <img
