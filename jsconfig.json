@@ -1,0 +1,6 @@
+// Example for absolute path
+{
+  "compilerOptions": {
+    "baseUrl": "./"
+  }
+}
