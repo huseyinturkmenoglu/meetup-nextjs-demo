@@ -8,4 +8,13 @@ const MeetupDetails = () => {
   )
 }
 
+export function getStaticProps() {
+  // fetch data for a single meetup
+  return {
+    props: {
+      meetupData
+    }
+  }
+}
+
 export default MeetupDetails
