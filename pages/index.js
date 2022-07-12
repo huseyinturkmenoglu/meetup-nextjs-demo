@@ -1,4 +1,4 @@
-import { DUMMY_MEETUPS } from "../assets/dummy";
+// import { DUMMY_MEETUPS } from "../assets/dummy";
 import { MongoClient } from 'mongodb';
 import MeetupList from "../components/meetups/MeetupList";
 
