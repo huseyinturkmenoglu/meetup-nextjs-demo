@@ -18,7 +18,6 @@ function NewMeetupForm(props) {
     const enteredDescription = descriptionInputRef.current.value;
 
     const meetupData = {
-      id : Math.floor(Math.random() * 100000),
       title: enteredTitle,
       image: enteredImage,
       address: enteredAddress,
