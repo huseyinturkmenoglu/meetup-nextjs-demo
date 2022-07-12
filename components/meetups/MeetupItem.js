@@ -5,10 +5,9 @@ import { useRouter } from "next/router";
 function MeetupItem(props) {
   const router = useRouter();
 
-  function showDetailsHandler(params) {
+  function showDetailsHandler() {
     router.push({
-      pathname: `/${props.id}`,
-      query: { ...props },
+      pathname: `/${props.id}`
     });
   }
 

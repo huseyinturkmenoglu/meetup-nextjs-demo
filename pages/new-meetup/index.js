@@ -1,16 +1,21 @@
 import NewMeetupForm from '../../components/meetups/NewMeetupForm'
 import { useRouter } from "next/router";
-import { DUMMY_MEETUPS } from "../../assets/dummy";
+// import { DUMMY_MEETUPS } from "../../assets/dummy";
 
 const NewMeetUp = () => {
   const router = useRouter();
 
-  function addMeetupHandler(params) {
-    router.push({
-      pathname: `/${params.id}`,
-      query: { ...params},
+  async function addMeetupHandler(params) {
+    
+    const response = await fetch('/api/new-meetup', {
+      method: 'POST',
+      body: JSON.stringify(params),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
-    DUMMY_MEETUPS.push(params);
+
+    router.push('/');
   }
   
   return (

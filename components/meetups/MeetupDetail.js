@@ -1,19 +1,17 @@
 import React from "react";
-import { useRouter } from 'next/router'
-const MeetupDetail = () => {
-  const {query} = useRouter()
 
+const MeetupDetail = (props) => {
   return (
-    <>
+    <div className="detail">
       <img
-        src={query.image}
-        alt={query.title}
+        src={props.image}
+        alt={props.title}
       />
-      <h1>{query.title}</h1>
-      <address>{query.address}</address>
-      {query.description && <p>{query.description}</p>}
-      {!query.description && <p>Description Coming Soon🙌</p>}
-    </>
+      <h1>{props.title}</h1>
+      <address>{props.address}</address>
+      {props.description && <p>{props.description}</p>}
+      {!props.description && <p>Description Coming Soon🙌</p>}
+    </div>
   );
 };
 
